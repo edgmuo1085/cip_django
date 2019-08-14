@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-	path('polls/', include('polls.urls')),
+	path('users/', include('users.urls')), #app 1
+	path('polls/', include('polls.urls')), #app 2
+    path('home/', include('home.urls')), #app 3
     path('admin/', admin.site.urls),
+    path('', include('home.urls')), #vista principal
 ]
